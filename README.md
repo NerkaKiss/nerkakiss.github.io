@@ -1,3 +1,9 @@
+
+| [Projects](./projects/projects.md)
+| [About](./projects/about.md)
+| [GitHub features](./projects/github_features.md)
+
+
 # 🌟 QA Engineer Portfolio
 
 Welcome to my portfolio! I'm **[Your Name]**, a QA Engineer passionate about delivering top-notch software quality.
