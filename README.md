@@ -1,64 +1,66 @@
 
 | [Projects](./projects/projects.md)
-| [About](./about/about.md)
-| [GitHub features](./github_features/github_features.md)
+|
+
+[//]: # (| [About]&#40;./about/about.md&#41;)
+
+[//]: # (| [GitHub features]&#40;./github_features/github_features.md&#41;)
 
 
-# 🌟 QA Engineer Portfolio
+# 🌟Hello, i'm QA Engineer and this is my portfolio
 
-Welcome to my portfolio! I'm **[Your Name]**, a QA Engineer passionate about delivering top-notch software quality.
+Welcome to my portfolio! I'm Nerijus Kisieliauskas, your friendly neighborhood QA Engineer. My superpower? Finding bugs before they find you! 🚀 Let’s make software better, one test at a time! 🐞
 
 ---
 
 ## 🚀 About Me
 🎯 Experienced in:
-- **Manual Testing**: Test design, execution, and defect reporting.
-- **Automation Testing**: Selenium, TestNG, and CI/CD.
-- **API Testing**: Postman and RestAssured.
+* **Test Automation:**  
+  ![Selenium](https://img.shields.io/badge/Selenium-Testing-green?logo=selenium) ![TestNG](https://img.shields.io/badge/TestNG-Framework-orange)  ![JUnit](https://img.shields.io/badge/JUnit-Testing%20Framework-blue?logo=junit5)    ![POM Structure](https://img.shields.io/badge/POM-Structure-lightgrey)
+
+* **Programming:**  
+  ![Python](https://img.shields.io/badge/Python-Language-blue?logo=python)    ![Java](https://img.shields.io/badge/Java-Programming-orange?logo=openjdk)
+
+* **API Testing:**  
+  ![Postman](https://img.shields.io/badge/Postman-API%20Testing-orange?logo=postman)    ![Java REST API](https://img.shields.io/badge/Java%20REST%20API-Development-green)
+
+* **Methodologies:**  
+  ![Agile](https://img.shields.io/badge/Agile-Methodology-blue)    ![Scrum](https://img.shields.io/badge/Scrum-Framework-lightblue)
+
+* **Test Design:**  
+  ![Test Scenarios](https://img.shields.io/badge/Test%20Scenarios-Design-yellow)    ![Test Cases](https://img.shields.io/badge/Test%20Cases-Writing-orange)
+
+* **Tools:**  
+  ![Git](https://img.shields.io/badge/Git-Version%20Control-red?logo=git)  ![Postman](https://img.shields.io/badge/Postman-API%20Testing-orange?logo=postman)    ![GitHub](https://img.shields.io/badge/GitHub-Repository%20Hosting-black?logo=github)  
+  ![Chrome DevTools](https://img.shields.io/badge/Chrome%20DevTools-Debugging-lightblue?logo=googlechrome) ![IntelliJ IDEA](https://img.shields.io/badge/IntelliJ%20IDEA-IDE-darkblue?logo=intellijidea)
+  ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-Editor-blue?logo=visualstudiocode)  
+  ![Jira](https://img.shields.io/badge/Jira-Project%20Management-blue?logo=jira)
 
 🌱 Always learning new tools and methodologies to enhance testing efficiency.
 
----
+* **JavaScript**  
+  ![JavaScript](https://img.shields.io/badge/JavaScript-Language-yellow?logo=javascript)
 
-## 📂 Featured Projects
-### 🛒 **E-commerce Website**
-- Automated test scripts using Selenium and TestNG.
-- Achieved 95% defect-free releases.
-- **Skills Used**: Selenium, Maven, Jenkins.
+* **Cypress**  
+  ![Cypress](https://img.shields.io/badge/Cypress-Test%20Automation-green?logo=cypress)
 
----
-
-### 🌐 **Banking Application**
-- Designed over 200 manual test cases for core banking features.
-- Automated key regression test scenarios using Appium.
-
----
-
-## 🛠 Skills
-| Skill            | Proficiency Level |
-|-------------------|-------------------|
-| Selenium          | ⭐⭐⭐⭐⭐           |
-| TestNG            | ⭐⭐⭐⭐⭐           |
-| JIRA              | ⭐⭐⭐⭐            |
-| Postman           | ⭐⭐⭐⭐⭐           |
+* **Playwright**  
+  ![Playwright](https://img.shields.io/badge/Playwright-Test%20Automation-blue?logo=playwright)
 
 ---
 
 ## 🏅 Certifications
-- ISTQB Foundation Level
-- Selenium WebDriver Certification
 
----
-
-## 📸 Portfolio Highlights
-
-![Automation Testing Workflow](https://via.placeholder.com/600x300?text=Automation+Testing+Workflow)
-
-![API Testing Overview](https://via.placeholder.com/600x300?text=API+Testing+Overview)
-
+- Learn Python 3
+- Learn Intermediate Python 3
+- Learn Advanced Python 3
+- Analyze Data with Python
+- AI Foundations and Practice (ChatGPT,  Claude, and MidJourney) course
+- SOFT SKILLS course
 ---
 
 ## 📬 Get in Touch
-- **Email**: [Your Email]
-- **LinkedIn**: [Your LinkedIn URL]
-- **GitHub**: [Your GitHub URL]
+- **Email**: [![Email](https://img.shields.io/badge/Email-nerkai%40gmail.com-blue?logo=gmail)](mailto:nerkai@gmail.com)
+- **LinkedIn**: [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?logo=linkedin)](https://www.linkedin.com/in/nerijuskisieliauskas/)
+- **GitHub**: [![GitHub](https://img.shields.io/badge/GitHub-Repository%20Hosting-black?logo=github)](https://github.com/NerkaKiss)
+
