@@ -1,6 +1,5 @@
 
 | [Projects](./projects/projects.md)
-|
 
 # 🌟Hello, i'm QA Engineer and this is my portfolio
 
