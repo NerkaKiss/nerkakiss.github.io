@@ -2,11 +2,6 @@
 | [Projects](./projects/projects.md)
 |
 
-[//]: # (| [About]&#40;./about/about.md&#41;)
-
-[//]: # (| [GitHub features]&#40;./github_features/github_features.md&#41;)
-
-
 # 🌟Hello, i'm QA Engineer and this is my portfolio
 
 Welcome to my portfolio! I'm Nerijus Kisieliauskas, your friendly neighborhood QA Engineer. My superpower? Finding bugs before they find you! 🚀 Let’s make software better, one test at a time! 🐞
@@ -57,10 +52,10 @@ Welcome to my portfolio! I'm Nerijus Kisieliauskas, your friendly neighborhood Q
 - Analyze Data with Python
 - AI Foundations and Practice (ChatGPT,  Claude, and MidJourney) course
 - SOFT SKILLS course
+
 ---
 
 ## 📬 Get in Touch
 - **Email**: [![Email](https://img.shields.io/badge/Email-nerkai%40gmail.com-blue?logo=gmail)](mailto:nerkai@gmail.com)
 - **LinkedIn**: [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?logo=linkedin)](https://www.linkedin.com/in/nerijuskisieliauskas/)
 - **GitHub**: [![GitHub](https://img.shields.io/badge/GitHub-Repository%20Hosting-black?logo=github)](https://github.com/NerkaKiss)
-
