@@ -9,6 +9,11 @@ _Automating website functionality and ensuring top-notch quality using tools lik
 
 ## 📌 Work in Progress
 
+**HerokuApp automation test**  
+_I am currently practicing automated testing of my herokuapp website and trying to overcome all the challenges I didn't have during the course._
+- **HerokuApp project**: [![HerokuApp](https://img.shields.io/badge/HerokuApp-Automation-blue)](https://github.com/NerkaKiss/herokuapp_automation)
+
+
 🔍 **Showcasing My QA Skills**  
 _Focusing on practical demonstrations of QA expertise, including test automation, bug tracking, and risk-based testing._
 
