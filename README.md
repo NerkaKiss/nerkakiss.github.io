@@ -45,6 +45,7 @@ Welcome to my portfolio! I'm Nerijus Kisieliauskas, your friendly neighborhood Q
 
 ## 🏅 Certifications
 
+- Manual & Automation Software Testing
 - Learn Python 3
 - Learn Intermediate Python 3
 - Learn Advanced Python 3

@@ -2,17 +2,17 @@
 
 Welcome to my projects showcase! Below, you'll find a glimpse of the exciting projects I am working on. Stay tuned as I continuously update and add new content!
 
-## 🔧 Upcoming Projects
+## 🎉 Completed Projects
 
-✨ **Automated Testing for Websites**  
-_Automating website functionality and ensuring top-notch quality using tools like Selenium, Playwright, and Cypress._
+✨ **Thesis Depo Online**  
+_Automated testing for the Depo Online website as part of my final project._
+- **Depo Online**: [![HerokuApp](https://img.shields.io/badge/DepoOnline-Automation-red)](https://github.com/NerkaKiss/herokuapp_automation)
 
 ## 📌 Work in Progress
 
-**HerokuApp automation test**  
-_I am currently practicing automated testing of my herokuapp website and trying to overcome all the challenges I didn't have during the course._
-- **HerokuApp project**: [![HerokuApp](https://img.shields.io/badge/HerokuApp-Automation-blue)](https://github.com/NerkaKiss/herokuapp_automation)
-
+🔧 **HerokuApp Automation Test**  
+_I am currently practicing automated testing of my HerokuApp website and overcoming the challenges I didn't face during the course._
+- **HerokuApp project**: [![HerokuApp](https://img.shields.io/badge/HerokuApp-Automation-blue)](https://github.com/NerkaKiss/Baigiamasis_darbas)
 
 🔍 **Showcasing My QA Skills**  
 _Focusing on practical demonstrations of QA expertise, including test automation, bug tracking, and risk-based testing._
