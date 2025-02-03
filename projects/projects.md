@@ -8,14 +8,11 @@ Welcome to my projects showcase! Below, you'll find a glimpse of the exciting pr
 _Automated testing for the Depo Online website as part of my final project._
 - **Depo Online**: [![DepoOnline](https://img.shields.io/badge/DepoOnline-Automation-red)](https://github.com/NerkaKiss/Baigiamasis_darbas)
 
-## 📌 Work in Progress
-
-🔧 **HerokuApp Automation Test**  
-_I am currently practicing automated testing of my HerokuApp website and overcoming the challenges I didn't face during the course._
+**HerokuApp Automation Test**  
+_Practiced automated testing on the HerokuApp website, overcoming challenges beyond the course material._
 - **HerokuApp project**: [![HerokuApp](https://img.shields.io/badge/HerokuApp-Automation-blue)](https://github.com/NerkaKiss/herokuapp_automation)
 
-🔍 **Showcasing My QA Skills**  
-_Focusing on practical demonstrations of QA expertise, including test automation, bug tracking, and risk-based testing._
+## 📌 Work in Progress
 
-🚀 **Enhancing My Personal Portfolio**  
-_Developing a personal portfolio to highlight projects, achievements, and technical skills to attract future opportunities._
+🔍 **API Testing with RestAssured**  
+_Deepening my API testing knowledge by working on a new project using RestAssured._
