@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nerijus Kisieliauskas — QA Automation Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0c0f0a;
+      --surface: #141810;
+      --surface2: #1c2117;
+      --green: #7fff5f;
+      --green-dim: #3a7a28;
+      --green-muted: #1e3d16;
+      --text: #e8f0e2;
+      --text-muted: #7a9070;
+      --text-dim: #4a6042;
+      --border: #2a3824;
+      --accent: #b8ff94;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Mono', monospace;
+      font-size: 14px;
+      line-height: 1.7;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Grid background */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      background-size: 40px 40px;
+      opacity: 0.35;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* NAV */
+    nav {
+      padding: 28px 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 15px;
+      color: var(--green);
+      letter-spacing: -0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--green); }
+
+    /* HERO */
+    .hero {
+      padding: 80px 0 64px;
+    }
+
+    .hero-label {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--green-dim);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .hero-label::before {
+      content: '';
+      display: inline-block;
+      width: 28px;
+      height: 1px;
+      background: var(--green-dim);
+    }
+
+    .hero h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(38px, 7vw, 64px);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .hero h1 span {
+      color: var(--green);
+    }
+
+    .hero-sub {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(18px, 3vw, 24px);
+      font-weight: 400;
+      color: var(--text-muted);
+      margin-bottom: 28px;
+      letter-spacing: -0.01em;
+    }
+
+    .hero-desc {
+      max-width: 520px;
+      color: var(--text-muted);
+      font-size: 13px;
+      line-height: 1.8;
+      margin-bottom: 40px;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--green);
+      color: #0c0f0a;
+      border: 1px solid var(--green);
+      font-weight: 500;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--green-dim);
+      color: var(--text);
+    }
+
+    /* SECTION */
+    section {
+      padding: 56px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--green-dim);
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-label::before {
+      content: '';
+      display: inline-block;
+      width: 28px;
+      height: 1px;
+      background: var(--green-dim);
+    }
+
+    /* STACK */
+    .stack-groups {
+      display: grid;
+      gap: 24px;
+    }
+
+    .stack-group-title {
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 12px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      padding: 5px 12px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      font-size: 12px;
+      color: var(--text-muted);
+      transition: all 0.15s;
+    }
+
+    .tag:hover {
+      border-color: var(--green-dim);
+      color: var(--text);
+    }
+
+    .tag.highlight {
+      border-color: var(--green-dim);
+      color: var(--green);
+      background: var(--green-muted);
+    }
+
+    /* PROJECT CARD */
+    .project-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 28px 32px;
+      transition: border-color 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--green);
+    }
+
+    .project-card:hover {
+      border-color: var(--green-dim);
+    }
+
+    .project-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 12px;
+    }
+
+    .project-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+
+    .project-link {
+      color: var(--text-dim);
+      text-decoration: none;
+      font-size: 12px;
+      border: 1px solid var(--border);
+      padding: 4px 12px;
+      border-radius: 3px;
+      white-space: nowrap;
+      transition: all 0.15s;
+      flex-shrink: 0;
+    }
+
+    .project-link:hover {
+      color: var(--green);
+      border-color: var(--green-dim);
+    }
+
+    .project-desc {
+      color: var(--text-muted);
+      font-size: 13px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .project-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 24px;
+      margin-bottom: 20px;
+    }
+
+    .feature {
+      font-size: 12px;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .feature::before {
+      content: '✓';
+      color: var(--green);
+      font-size: 11px;
+      flex-shrink: 0;
+    }
+
+    .project-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tech-badge {
+      font-size: 11px;
+      padding: 3px 9px;
+      border-radius: 2px;
+      background: var(--green-muted);
+      color: var(--green);
+      border: 1px solid var(--green-dim);
+      letter-spacing: 0.04em;
+    }
+
+    /* QUOTE */
+    .quote-block {
+      border-left: 2px solid var(--green);
+      padding: 16px 24px;
+      background: var(--surface);
+      border-radius: 0 4px 4px 0;
+      font-style: italic;
+      color: var(--text-muted);
+      font-size: 15px;
+    }
+
+    /* CONTACT */
+    .contact-grid {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 32px 0;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-text {
+      font-size: 12px;
+      color: var(--text-dim);
+    }
+
+    .footer-text span {
+      color: var(--green-dim);
+    }
+
+    /* STATUS DOT */
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 11px;
+      color: var(--text-muted);
+      padding: 4px 12px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: var(--surface);
+    }
+
+    .status-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--green);
+      animation: pulse 2s infinite;
+      flex-shrink: 0;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    /* ANIMATIONS */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(16px);
+      animation: fadeIn 0.6s forwards;
+    }
+
+    .fade-in:nth-child(1) { animation-delay: 0.1s; }
+    .fade-in:nth-child(2) { animation-delay: 0.2s; }
+    .fade-in:nth-child(3) { animation-delay: 0.3s; }
+    .fade-in:nth-child(4) { animation-delay: 0.4s; }
+
+    @keyframes fadeIn {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 560px) {
+      .project-features { grid-template-columns: 1fr; }
+      .project-header { flex-direction: column; }
+      nav { flex-direction: column; align-items: flex-start; gap: 16px; }
+      footer { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <nav>
+      <div class="nav-logo">NK /</div>
+      <ul class="nav-links">
+        <li><a href="#stack">Stack</a></li>
+        <li><a href="#project">Project</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section class="hero" style="border-top: none; padding-top: 80px;">
+      <div class="fade-in">
+        <div class="hero-label">QA Automation Engineer</div>
+      </div>
+      <div class="fade-in">
+        <h1>Nerijus<br /><span>Kisieliauskas</span></h1>
+        <p class="hero-sub">Breaking things so users don't have to.</p>
+      </div>
+      <div class="fade-in">
+        <p class="hero-desc">
+          QA Automation Engineer building reliable, maintainable E2E and API test frameworks.
+          Transitioning from sales management — bringing structured thinking and sharp
+          communication into test automation. Based in Vilnius, Lithuania.
+        </p>
+      </div>
+      <div class="fade-in">
+        <div class="hero-ctas">
+          <a href="https://github.com/NerkaKiss" class="btn btn-primary" target="_blank">
+            ↗ GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/nerijuskisieliauskas/" class="btn btn-secondary" target="_blank">
+            LinkedIn
+          </a>
+          <div class="status">
+            <span class="status-dot"></span>
+            Open to opportunities
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="stack">
+      <div class="section-label">Automation Stack</div>
+      <div class="stack-groups">
+        <div>
+          <div class="stack-group-title">Test Automation</div>
+          <div class="tags">
+            <span class="tag highlight">Playwright</span>
+            <span class="tag highlight">TypeScript</span>
+            <span class="tag">Selenium</span>
+            <span class="tag">Java</span>
+            <span class="tag">Page Object Model</span>
+            <span class="tag">TestNG</span>
+            <span class="tag">JUnit</span>
+          </div>
+        </div>
+        <div>
+          <div class="stack-group-title">API & Backend</div>
+          <div class="tags">
+            <span class="tag">REST Assured</span>
+            <span class="tag">GraphQL</span>
+            <span class="tag">Postman</span>
+            <span class="tag">REST API</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Python</span>
+          </div>
+        </div>
+        <div>
+          <div class="stack-group-title">CI/CD & Tools</div>
+          <div class="tags">
+            <span class="tag highlight">GitHub Actions</span>
+            <span class="tag">Git</span>
+            <span class="tag">Allure</span>
+            <span class="tag">Jira</span>
+            <span class="tag">VS Code</span>
+            <span class="tag">IntelliJ IDEA</span>
+            <span class="tag">Chrome DevTools</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="project">
+      <div class="section-label">Featured Project</div>
+      <div class="project-card">
+        <div class="project-header">
+          <div class="project-title">Playwright E2E + API Framework</div>
+          <a href="https://github.com/NerkaKiss/depo-playwright-ts" class="project-link" target="_blank">
+            ↗ View repo
+          </a>
+        </div>
+        <p class="project-desc">
+          End-to-end and API test automation for a real Lithuanian e-commerce site
+          (online.depo-diy.lt). Full 5-phase framework covering authentication,
+          product browsing, cart, checkout, and API validation.
+        </p>
+        <div class="project-features">
+          <span class="feature">Page Object Model + PageManager</span>
+          <span class="feature">GraphQL cart validation</span>
+          <span class="feature">Custom fixtures pattern</span>
+          <span class="feature">CI/CD with GitHub Actions</span>
+          <span class="feature">UI + API testing</span>
+          <span class="feature">Allure reporting</span>
+        </div>
+        <div class="project-tech">
+          <span class="tech-badge">Playwright</span>
+          <span class="tech-badge">TypeScript</span>
+          <span class="tech-badge">GraphQL</span>
+          <span class="tech-badge">GitHub Actions</span>
+          <span class="tech-badge">Allure</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="quote-block">
+        "Discovering bugs before users do."
+      </div>
+    </section>
+
+    <section id="contact" style="padding-bottom: 24px;">
+      <div class="section-label">Let's Connect</div>
+      <div class="contact-grid">
+        <a href="mailto:nerkai@gmail.com" class="btn btn-secondary">
+          ✉ nerkai@gmail.com
+        </a>
+        <a href="https://www.linkedin.com/in/nerijuskisieliauskas/" class="btn btn-secondary" target="_blank">
+          ↗ LinkedIn
+        </a>
+        <a href="https://github.com/NerkaKiss" class="btn btn-secondary" target="_blank">
+          ↗ GitHub
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-text">
+        Nerijus Kisieliauskas — <span>QA Automation Engineer</span>
+      </div>
+      <div class="footer-text">
+        Vilnius, Lithuania
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
