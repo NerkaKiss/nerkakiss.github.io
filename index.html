@@ -10,38 +10,14 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --bg: #0c0f0a;
-      --surface: #141810;
-      --surface2: #1c2117;
-      --green: #7fff5f;
-      --green-dim: #3a7a28;
-      --green-muted: #1e3d16;
-      --text: #e8f0e2;
-      --text-muted: #7a9070;
-      --text-dim: #4a6042;
-      --border: #2a3824;
-      --accent: #b8ff94;
+      --bg: #0c0f0a; --surface: #141810; --surface2: #1c2117;
+      --green: #7fff5f; --green-dim: #3a7a28; --green-muted: #1e3d16;
+      --text: #e8f0e2; --text-muted: #7a9070; --text-dim: #4a6042;
+      --border: #2a3824; --accent: #b8ff94;
     }
     html { scroll-behavior: smooth; }
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'DM Mono', monospace;
-      font-size: 14px;
-      line-height: 1.7;
-      min-height: 100vh;
-      overflow-x: hidden;
-    }
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background-image: linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px);
-      background-size: 40px 40px;
-      opacity: 0.35;
-      pointer-events: none;
-      z-index: 0;
-    }
+    body { background: var(--bg); color: var(--text); font-family: 'DM Mono', monospace; font-size: 14px; line-height: 1.7; min-height: 100vh; overflow-x: hidden; }
+    body::before { content: ''; position: fixed; inset: 0; background-image: linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px); background-size: 40px 40px; opacity: 0.35; pointer-events: none; z-index: 0; }
     .container { max-width: 780px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
     nav { padding: 28px 0 20px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border); }
     .nav-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 15px; color: var(--green); letter-spacing: -0.02em; }
@@ -69,7 +45,7 @@
     .tags { display: flex; flex-wrap: wrap; gap: 8px; }
     .tag { padding: 5px 12px; background: var(--surface2); border: 1px solid var(--border); border-radius: 3px; font-size: 12px; color: var(--text-muted); transition: all 0.15s; }
     .tag:hover { border-color: var(--green-dim); color: var(--text); }
-    .tag.highlight { border-color: var(--green-dim); color: var(--green); background: var(--green-muted); }
+    .projects-grid { display: grid; gap: 20px; }
     .project-card { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 28px 32px; transition: border-color 0.2s; position: relative; overflow: hidden; }
     .project-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--green); }
     .project-card:hover { border-color: var(--green-dim); }
@@ -80,7 +56,7 @@
     .project-desc { color: var(--text-muted); font-size: 13px; line-height: 1.8; margin-bottom: 20px; }
     .project-features { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 24px; margin-bottom: 20px; }
     .feature { font-size: 12px; color: var(--text-muted); display: flex; align-items: center; gap: 8px; }
-    .feature::before { content: 'v'; color: var(--green); font-size: 11px; flex-shrink: 0; }
+    .feature::before { content: '✓'; color: var(--green); font-size: 11px; flex-shrink: 0; }
     .project-tech { display: flex; flex-wrap: wrap; gap: 6px; }
     .tech-badge { font-size: 11px; padding: 3px 9px; border-radius: 2px; background: var(--green-muted); color: var(--green); border: 1px solid var(--green-dim); letter-spacing: 0.04em; }
     .quote-block { border-left: 2px solid var(--green); padding: 16px 24px; background: var(--surface); border-radius: 0 4px 4px 0; font-style: italic; color: var(--text-muted); font-size: 15px; }
@@ -112,7 +88,7 @@
       <div class="nav-logo">NK /</div>
       <ul class="nav-links">
         <li><a href="#stack">Stack</a></li>
-        <li><a href="#project">Project</a></li>
+        <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -129,7 +105,7 @@
         <p class="hero-desc">
           QA Automation Engineer building reliable, maintainable E2E and API test frameworks.
           Transitioning from sales management — bringing structured thinking and sharp
-          communication into test automation. Based in Kaunas, Lithuania.
+          communication into test automation. Based in Vilnius, Lithuania.
         </p>
       </div>
       <div class="fade-in">
@@ -158,7 +134,7 @@
           <div class="stack-group-title">Programming</div>
           <div class="tags">
             <span class="tag highlight">TypeScript</span>
-            <span class="tag">Java</span>
+            <span class="tag highlight">Java</span>
             <span class="tag">JavaScript</span>
             <span class="tag">Python</span>
           </div>
@@ -166,8 +142,8 @@
         <div>
           <div class="stack-group-title">API Testing</div>
           <div class="tags">
-            <span class="tag">REST Assured</span>
-            <span class="tag">GraphQL</span>
+            <span class="tag highlight">REST Assured</span>
+            <span class="tag highlight">GraphQL</span>
             <span class="tag">Postman</span>
             <span class="tag">REST API</span>
           </div>
@@ -176,8 +152,8 @@
           <div class="stack-group-title">CI/CD &amp; Tools</div>
           <div class="tags">
             <span class="tag highlight">GitHub Actions</span>
+            <span class="tag highlight">Allure</span>
             <span class="tag">Git</span>
-            <span class="tag">Allure</span>
             <span class="tag">Jira</span>
             <span class="tag">VS Code</span>
             <span class="tag">IntelliJ IDEA</span>
@@ -187,33 +163,64 @@
       </div>
     </section>
 
-    <section id="project">
-      <div class="section-label">Featured Project</div>
-      <div class="project-card">
-        <div class="project-header">
-          <div class="project-title">Playwright E2E + API Framework</div>
-          <a href="https://github.com/NerkaKiss/depo-playwright-ts" class="project-link" target="_blank">View repo</a>
+    <section id="projects">
+      <div class="section-label">Projects</div>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-title">Playwright E2E + API Framework</div>
+            <a href="https://github.com/NerkaKiss/depo-playwright-ts" class="project-link" target="_blank">View repo</a>
+          </div>
+          <p class="project-desc">
+            End-to-end and API test automation for a real Lithuanian e-commerce site
+            (online.depo-diy.lt). Full 5-phase framework covering authentication,
+            product browsing, cart, checkout, and API validation.
+          </p>
+          <div class="project-features">
+            <span class="feature">Page Object Model + PageManager</span>
+            <span class="feature">GraphQL cart validation</span>
+            <span class="feature">Custom fixtures pattern</span>
+            <span class="feature">CI/CD with GitHub Actions</span>
+            <span class="feature">UI + API testing</span>
+            <span class="feature">Allure reporting</span>
+          </div>
+          <div class="project-tech">
+            <span class="tech-badge">Playwright</span>
+            <span class="tech-badge">TypeScript</span>
+            <span class="tech-badge">GraphQL</span>
+            <span class="tech-badge">GitHub Actions</span>
+            <span class="tech-badge">Allure</span>
+          </div>
         </div>
-        <p class="project-desc">
-          End-to-end and API test automation for a real Lithuanian e-commerce site
-          (online.depo-diy.lt). Full 5-phase framework covering authentication,
-          product browsing, cart, checkout, and API validation.
-        </p>
-        <div class="project-features">
-          <span class="feature">Page Object Model + PageManager</span>
-          <span class="feature">GraphQL cart validation</span>
-          <span class="feature">Custom fixtures pattern</span>
-          <span class="feature">CI/CD with GitHub Actions</span>
-          <span class="feature">UI + API testing</span>
-          <span class="feature">Allure reporting</span>
+
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-title">REST Assured API Framework</div>
+            <a href="https://github.com/NerkaKiss/qa-dummyjson-restassured" class="project-link" target="_blank">View repo</a>
+          </div>
+          <p class="project-desc">
+            API test automation framework for DummyJSON built with Java 21, REST Assured, and TestNG.
+            Modular architecture with API layer, request/response DTOs, and reusable utilities.
+          </p>
+          <div class="project-features">
+            <span class="feature">Auth, products, search, cart</span>
+            <span class="feature">End-to-end cart flow test</span>
+            <span class="feature">Soft assertions for full validation</span>
+            <span class="feature">Dynamic data — no hardcoding</span>
+            <span class="feature">Positive &amp; negative grouping</span>
+            <span class="feature">CI/CD with GitHub Actions</span>
+          </div>
+          <div class="project-tech">
+            <span class="tech-badge">Java 21</span>
+            <span class="tech-badge">REST Assured</span>
+            <span class="tech-badge">TestNG</span>
+            <span class="tech-badge">Maven</span>
+            <span class="tech-badge">GitHub Actions</span>
+            <span class="tech-badge">Allure</span>
+          </div>
         </div>
-        <div class="project-tech">
-          <span class="tech-badge">Playwright</span>
-          <span class="tech-badge">TypeScript</span>
-          <span class="tech-badge">GraphQL</span>
-          <span class="tech-badge">GitHub Actions</span>
-          <span class="tech-badge">Allure</span>
-        </div>
+
       </div>
     </section>
 
@@ -224,7 +231,7 @@
     <section id="contact" style="padding-bottom: 24px;">
       <div class="section-label">Let's Connect</div>
       <div class="contact-grid">
-        <a href="#" id="email-btn" class="btn btn-secondary">nerkai@gmail.com</a>
+        <a href="#" id="email-btn" class="btn btn-secondary">nerkai&#64;gmail.com</a>
         <a href="https://www.linkedin.com/in/nerijuskisieliauskas/" class="btn btn-secondary" target="_blank">LinkedIn</a>
         <a href="https://github.com/NerkaKiss" class="btn btn-secondary" target="_blank">GitHub</a>
       </div>
@@ -232,13 +239,13 @@
 
     <footer>
       <div class="footer-text">Nerijus Kisieliauskas &mdash; <span>QA Automation Engineer</span></div>
-      <div class="footer-text">Kaunas, Lithuania</div>
+      <div class="footer-text">Vilnius, Lithuania</div>
     </footer>
 
   </div>
   <script>
     var btn = document.getElementById('email-btn');
-    if (btn) { btn.href = 'mailto:' + 'nerkai' + '@' + 'gmail.com'; }
+    if (btn) { btn.href = ['mai', 'lto', ':', 'nerkai', '@', 'gmail.com'].join(''); }
   </script>
 </body>
 </html>
