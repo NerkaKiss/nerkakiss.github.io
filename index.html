@@ -52,6 +52,7 @@
     .project-card:hover { border-color: var(--green-dim); }
     .project-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 12px; }
     .project-title { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 700; color: var(--text); letter-spacing: -0.02em; }
+    .project-links { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
     .project-link { color: var(--text-dim); text-decoration: none; font-size: 12px; border: 1px solid var(--border); padding: 4px 12px; border-radius: 3px; white-space: nowrap; transition: all 0.15s; flex-shrink: 0; }
     .project-link:hover { color: var(--green); border-color: var(--green-dim); }
     .project-desc { color: var(--text-muted); font-size: 13px; line-height: 1.8; margin-bottom: 20px; }
@@ -79,6 +80,7 @@
     @media (max-width: 560px) {
       .project-features { grid-template-columns: 1fr; }
       .project-header { flex-direction: column; }
+      .project-links { justify-content: flex-start; }
       nav { flex-direction: column; align-items: flex-start; gap: 16px; }
       footer { flex-direction: column; align-items: flex-start; }
     }
@@ -175,7 +177,10 @@
         <div class="project-card">
           <div class="project-header">
             <div class="project-title">LTG Link Playwright Python E2E</div>
-            <a href="https://github.com/NerkaKiss/ltglink-playwright-python" class="btn btn-primary" target="_blank" rel="noopener noreferrer">View repo</a>
+            <div class="project-links">
+              <a href="https://github.com/NerkaKiss/ltglink-playwright-python" class="btn btn-primary" target="_blank" rel="noopener noreferrer">View repo</a>
+              <a href="https://github.com/NerkaKiss/ltglink-playwright-python/actions" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">View CI</a>
+            </div>
           </div>
           <p class="project-desc">
             End-to-end test automation suite for LTG Link, the Lithuanian train ticket booking platform.
@@ -208,7 +213,10 @@
         <div class="project-card">
           <div class="project-header">
             <div class="project-title">Playwright E2E + API Framework</div>
-            <a href="https://github.com/NerkaKiss/depo-playwright-ts" class="btn btn-primary" target="_blank" rel="noopener noreferrer">View repo</a>
+            <div class="project-links">
+              <a href="https://github.com/NerkaKiss/depo-playwright-ts" class="btn btn-primary" target="_blank" rel="noopener noreferrer">View repo</a>
+              <a href="https://github.com/NerkaKiss/depo-playwright-ts/actions" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">View CI</a>
+            </div>
           </div>
           <p class="project-desc">
             End-to-end and API test automation framework for a Lithuanian e-commerce site,
@@ -240,7 +248,10 @@
         <div class="project-card">
           <div class="project-header">
             <div class="project-title">REST Assured API Framework</div>
-            <a href="https://github.com/NerkaKiss/qa-dummyjson-restassured" class="btn btn-primary" target="_blank" rel="noopener noreferrer">View repo</a>
+            <div class="project-links">
+              <a href="https://github.com/NerkaKiss/qa-dummyjson-restassured" class="btn btn-primary" target="_blank" rel="noopener noreferrer">View repo</a>
+              <a href="https://github.com/NerkaKiss/qa-dummyjson-restassured/actions" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">View CI</a>
+            </div>
           </div>
           <p class="project-desc">
             API test automation framework for DummyJSON built with Java 21, REST Assured, and TestNG.
