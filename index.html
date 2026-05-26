@@ -55,6 +55,8 @@
     .project-link { color: var(--text-dim); text-decoration: none; font-size: 12px; border: 1px solid var(--border); padding: 4px 12px; border-radius: 3px; white-space: nowrap; transition: all 0.15s; flex-shrink: 0; }
     .project-link:hover { color: var(--green); border-color: var(--green-dim); }
     .project-desc { color: var(--text-muted); font-size: 13px; line-height: 1.8; margin-bottom: 20px; }
+    .project-metrics { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+    .metric { font-size: 11px; padding: 4px 10px; border-radius: 999px; background: var(--surface2); color: var(--text-muted); border: 1px solid var(--border); }
     .project-features { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 24px; margin-bottom: 20px; }
     .feature { font-size: 12px; color: var(--text-muted); display: flex; align-items: center; gap: 8px; }
     .feature::before { content: '✓'; color: var(--green); font-size: 11px; flex-shrink: 0; }
@@ -179,6 +181,12 @@
             End-to-end test automation suite for LTG Link, the Lithuanian train ticket booking platform.
             Covers authenticated flows, route search, mobile checks, and multi-step booking journeys.
           </p>
+          <div class="project-metrics">
+            <span class="metric">24 UI tests</span>
+            <span class="metric">11 smoke</span>
+            <span class="metric">16 regression</span>
+            <span class="metric">Nightly CI</span>
+          </div>
           <div class="project-features">
             <span class="feature">Page Object Model + PageManager</span>
             <span class="feature">Pytest fixtures and markers</span>
@@ -206,6 +214,12 @@
             End-to-end and API test automation framework for a Lithuanian e-commerce site,
             covering authentication, product browsing, cart, checkout, and API validation.
           </p>
+          <div class="project-metrics">
+            <span class="metric">32 Playwright tests</span>
+            <span class="metric">15 positive</span>
+            <span class="metric">17 negative</span>
+            <span class="metric">GraphQL API</span>
+          </div>
           <div class="project-features">
             <span class="feature">Page Object Model + PageManager</span>
             <span class="feature">GraphQL cart validation</span>
@@ -232,6 +246,12 @@
             API test automation framework for DummyJSON built with Java 21, REST Assured, and TestNG.
             Modular architecture with API layer, request/response DTOs, and reusable utilities.
           </p>
+          <div class="project-metrics">
+            <span class="metric">17 API tests</span>
+            <span class="metric">11 positive</span>
+            <span class="metric">6 negative</span>
+            <span class="metric">Cart flow</span>
+          </div>
           <div class="project-features">
             <span class="feature">Auth, products, search, cart</span>
             <span class="feature">End-to-end cart flow test</span>
