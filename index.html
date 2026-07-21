@@ -4,6 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nerijus Kisieliauskas | QA Automation Engineer</title>
+  <meta name="description" content="QA Automation Engineer portfolio by Nerijus Kisieliauskas: Playwright, REST Assured, Java, TypeScript, Python, CI/CD, Allure reporting, and UI/API automation projects." />
+  <meta property="og:title" content="Nerijus Kisieliauskas | QA Automation Engineer" />
+  <meta property="og:description" content="Portfolio with UI and API automation projects, CI pipelines, Allure reporting, and maintainable test framework architecture." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="profile-640.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
@@ -21,7 +26,6 @@
       --text-muted: #8ca383;
       --text-dim: #58704f;
       --border: #2a3824;
-      --danger: #ffb86b;
     }
     html { scroll-behavior: smooth; }
     body {
@@ -44,6 +48,10 @@
       z-index: 0;
     }
     a { color: inherit; }
+    a:focus-visible, .btn:focus-visible {
+      outline: 2px solid var(--green);
+      outline-offset: 3px;
+    }
     .container { width: min(1120px, calc(100% - 40px)); margin: 0 auto; position: relative; z-index: 1; }
     nav {
       display: flex;
@@ -241,7 +249,6 @@
     .project-desc { color: var(--text-muted); margin-bottom: 16px; max-width: 850px; }
     .metrics { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
     .metric { padding: 4px 10px; border: 1px solid var(--border); border-radius: 999px; color: var(--text-muted); font-size: 11px; background: var(--surface-strong); }
-    .metric.ai { border-color: rgba(255, 184, 107, 0.4); color: var(--danger); }
     .project-points { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 18px; list-style: none; }
     .project-points li { position: relative; padding-left: 20px; color: var(--text-muted); font-size: 12px; }
     .project-points li::before { content: '✓'; position: absolute; left: 0; color: var(--green); }
@@ -307,6 +314,7 @@
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#experience">Background</a></li>
+        <li><a href="#education">Education</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -323,6 +331,7 @@
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="Nerijus_Kisieliauskas_QA_Automation_CV.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
+            <a class="btn btn-secondary" href="#projects">View Projects</a>
             <a class="btn btn-secondary" href="https://www.linkedin.com/in/nerijuskisieliauskas/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             <a class="btn btn-secondary" href="https://github.com/NerkaKiss" target="_blank" rel="noopener noreferrer">GitHub</a>
             <a class="btn btn-secondary" href="#contact">Contact</a>
@@ -331,7 +340,7 @@
 
         <aside class="photo-card" aria-label="Profile photo">
           <div class="photo-frame">
-            <img src="profile-640.jpg" alt="Nerijus Kisieliauskas" onerror="this.parentElement.classList.add('missing-photo')" />
+            <img src="profile-640.jpg" alt="Nerijus Kisieliauskas" decoding="async" onerror="this.parentElement.classList.add('missing-photo')" />
           </div>
           <div class="photo-note">QA Automation Engineer</div>
         </aside>
@@ -352,7 +361,7 @@
         </div>
         <div class="quick-card">
           <div class="quick-label">Workflow</div>
-          <div class="quick-value">AI-assisted, manually validated</div>
+          <div class="quick-value">CI, reports, failure artifacts</div>
         </div>
       </div>
 
@@ -371,9 +380,8 @@
               Playwright, REST Assured, TestNG, Pytest, Maven, GitHub Actions, and Allure Reports.
             </p>
             <p>
-              My current workflow combines manual QA thinking with AI-assisted development: OpenCode for
-              implementation and refactoring, Playwright MCP for application exploration and locator discovery,
-              and manual review for every generated or assisted change.
+              My current workflow combines manual QA thinking with automation delivery: structured test design,
+              reliable locators, CI feedback, failure artifacts, and manual review of every assisted change.
             </p>
           </div>
           <div class="card">
@@ -399,7 +407,6 @@
             <div class="skill-title">Test Automation</div>
             <div class="tags">
               <span class="tag">Playwright</span>
-              <span class="tag">Selenium WebDriver</span>
               <span class="tag">REST Assured</span>
               <span class="tag">TestNG</span>
               <span class="tag">Pytest</span>
@@ -410,7 +417,6 @@
             <div class="tags">
               <span class="tag">Java</span>
               <span class="tag">TypeScript</span>
-              <span class="tag">JavaScript</span>
               <span class="tag">Python</span>
             </div>
           </div>
@@ -429,9 +435,9 @@
             <div class="tags">
               <span class="tag">OpenCode</span>
               <span class="tag">Playwright MCP</span>
-              <span class="tag">ChatGPT</span>
-              <span class="tag">GitHub Copilot</span>
-              <span class="tag">Claude</span>
+              <span class="tag">Manual validation</span>
+              <span class="tag">Code review</span>
+              <span class="tag">Locator discovery</span>
             </div>
           </div>
           <div class="skill-card">
@@ -441,7 +447,7 @@
               <span class="tag">PageManager</span>
               <span class="tag">Fixtures</span>
               <span class="tag">Test Data Management</span>
-              <span class="tag">Framework Design</span>
+              <span class="tag">Reusable helpers</span>
             </div>
           </div>
           <div class="skill-card">
@@ -450,7 +456,7 @@
               <span class="tag">GitHub Actions</span>
               <span class="tag">Allure</span>
               <span class="tag">Playwright Trace Viewer</span>
-              <span class="tag">Screenshots</span>
+              <span class="tag">Failure artifacts</span>
               <span class="tag">Retries</span>
             </div>
           </div>
@@ -474,6 +480,7 @@
               <span class="tag">IntelliJ IDEA</span>
               <span class="tag">VS Code</span>
               <span class="tag">Chrome DevTools</span>
+              <span class="tag">Selenium basics</span>
             </div>
           </div>
         </div>
@@ -498,6 +505,7 @@
               <div class="project-links">
                 <a class="btn btn-primary" href="https://github.com/NerkaKiss/java-playwright-dpd-shipping-flow" target="_blank" rel="noopener noreferrer">Repo</a>
                 <a class="btn btn-secondary" href="https://github.com/NerkaKiss/java-playwright-dpd-shipping-flow/actions" target="_blank" rel="noopener noreferrer">CI</a>
+                <a class="btn btn-secondary" href="https://nerkakiss.github.io/java-playwright-dpd-shipping-flow/" target="_blank" rel="noopener noreferrer">View Report</a>
               </div>
             </div>
             <p class="project-desc">20-test E2E suite for DPD Lithuania's live shipment platform, covering login validation, shipment options, parcel locker selection, and PUDO-to-PUDO flow up to payment.</p>
@@ -505,9 +513,9 @@
               <span class="metric">20 E2E tests</span>
               <span class="metric">5 smoke</span>
               <span class="metric">12 regression</span>
-              <span class="metric">3 security</span>
+              <span class="metric">3 auth checks</span>
               <span class="metric">Allure + traces</span>
-              <span class="metric ai">OpenCode assisted</span>
+              <span class="metric">Failure diagnostics</span>
             </div>
             <ul class="project-points">
               <li>POM with PageManager and authenticated storage state</li>
@@ -535,12 +543,12 @@
               <span class="metric">17 negative</span>
               <span class="metric">GraphQL API</span>
               <span class="metric">Parallel execution</span>
-              <span class="metric ai">Playwright MCP</span>
+              <span class="metric">Test data cleanup</span>
             </div>
             <ul class="project-points">
               <li>POM architecture with PageManager and custom fixtures</li>
               <li>Typed test data, reusable auth setup, and GraphQL cart cleanup</li>
-              <li>Playwright MCP used for exploration and locator discovery</li>
+              <li>Reliable locator strategy and reusable page components</li>
               <li>GitHub Actions, Allure reporting, and tagged execution</li>
             </ul>
           </article>
@@ -563,7 +571,7 @@
               <span class="metric">16 regression</span>
               <span class="metric">Nightly CI</span>
               <span class="metric">Videos + traces</span>
-              <span class="metric ai">AI-assisted debugging</span>
+              <span class="metric">Failure diagnostics</span>
             </div>
             <ul class="project-points">
               <li>POM with PageManager and reusable date picker components</li>
@@ -591,12 +599,12 @@
               <span class="metric">6 negative</span>
               <span class="metric">DTOs</span>
               <span class="metric">Soft assertions</span>
-              <span class="metric ai">AI-assisted implementation</span>
+              <span class="metric">Reusable API layer</span>
             </div>
             <ul class="project-points">
               <li>Reusable API and configuration layers</li>
               <li>Request/response DTOs and dynamic test data</li>
-              <li>Manual review and validation of AI-assisted generated tests</li>
+              <li>Manual review and validation of automated API checks</li>
               <li>TestNG, Maven, Allure, and GitHub Actions</li>
             </ul>
           </article>
@@ -614,9 +622,9 @@
           <div class="timeline-item">
             <div class="timeline-date">2026 - Present</div>
             <div>
-              <div class="timeline-title">QA Automation Engineer</div>
-              <div class="timeline-company">Independent Projects</div>
-              <p class="timeline-text">Designed UI and API automation frameworks, applied AI-assisted QA workflows, and built CI/CD pipelines with automated reporting and failure artifacts.</p>
+              <div class="timeline-title">Independent QA Automation Projects</div>
+              <div class="timeline-company">Portfolio Development</div>
+              <p class="timeline-text">Designed UI and API automation frameworks, built CI/CD pipelines, and produced automated reporting, traces, videos, screenshots, and failure diagnostics.</p>
             </div>
           </div>
           <div class="timeline-item">
@@ -669,10 +677,10 @@
           <div>
             <div class="section-label">Contact</div>
             <h2>Let's connect.</h2>
-            <p>Available for QA Automation Engineer opportunities focused on UI automation, API testing, CI/CD, and maintainable test framework development.</p>
+            <p>Available for QA Automation Engineer opportunities focused on UI automation, API testing, CI/CD, and maintainable test framework development. Open to roles in Kaunas, Vilnius, hybrid, or remote within Lithuania.</p>
           </div>
           <div class="contact-actions">
-            <a id="email-btn" class="btn btn-primary" href="#">Email</a>
+            <a id="email-btn" class="btn btn-primary" href="#" aria-label="Email Nerijus Kisieliauskas">Email</a>
             <a class="btn btn-secondary" href="tel:+37061273058">Call</a>
             <a class="btn btn-secondary" href="https://www.linkedin.com/in/nerijuskisieliauskas/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </div>
