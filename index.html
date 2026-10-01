@@ -412,6 +412,7 @@
               <span class="tag">Playwright</span>
               <span class="tag">Appium</span>
               <span class="tag">REST Assured</span>
+              <span class="tag">Cucumber</span>
               <span class="tag">TestNG</span>
               <span class="tag">Pytest</span>
             </div>
@@ -471,6 +472,7 @@
             <div class="tags">
               <span class="tag">E2E</span>
               <span class="tag">API</span>
+              <span class="tag">BDD / Gherkin</span>
               <span class="tag">Smoke</span>
               <span class="tag">Regression</span>
               <span class="tag">Functional</span>
@@ -622,29 +624,35 @@
           <article class="project-card">
             <div class="project-top">
               <div>
-                <div class="project-meta">2026 / REST Assured, Java</div>
-                <h3 class="project-title">E-Commerce API Test Automation</h3>
+                <div class="project-meta">2026 / REST Assured, Cucumber, Java</div>
+                <h3 class="project-title">API Test Automation — DummyJSON</h3>
               </div>
-              <div class="project-links">
-                <a class="btn btn-primary" href="https://github.com/NerkaKiss/qa-dummyjson-restassured" target="_blank" rel="noopener noreferrer">Repo</a>
-                <a class="btn btn-secondary" href="https://github.com/NerkaKiss/qa-dummyjson-restassured/actions" target="_blank" rel="noopener noreferrer">CI</a>
-                <a class="btn btn-secondary" href="https://nerkakiss.github.io/qa-dummyjson-restassured/" target="_blank" rel="noopener noreferrer">View Report</a>
+			    <div class="project-links">
+              <a class="btn btn-primary" href="https://github.com/NerkaKiss/qa-dummyjson-restassured" target="_blank" rel="noopener noreferrer">Classic Repo</a>
+              <a class="btn btn-secondary" href="https://github.com/NerkaKiss/qa-dummyjson-restassured/actions" target="_blank" rel="noopener noreferrer">Classic CI</a>
+              <a class="btn btn-secondary" href="https://nerkakiss.github.io/qa-dummyjson-restassured/" target="_blank" rel="noopener noreferrer">Allure Report</a>
               </div>
+			    <div class="project-links">
+              <a class="btn btn-primary" href="https://github.com/NerkaKiss/dummyjson-api-bdd-cucumber" target="_blank" rel="noopener noreferrer">BDD Repo</a>
+              <a class="btn btn-secondary" href="https://github.com/NerkaKiss/dummyjson-api-bdd-cucumber/actions" target="_blank" rel="noopener noreferrer">BDD CI</a>
+			  <a class="btn btn-secondary" href="https://nerkakiss.github.io/dummyjson-api-bdd-cucumber/" target="_blank" rel="noopener noreferrer">Cucumber Report</a>
+				</div>
             </div>
-            <p class="project-desc">17-test modular REST Assured framework for DummyJSON covering authentication, products, search, cart, and an end-to-end cart flow.</p>
+            <p class="project-desc">The same 17-scenario DummyJSON regression coverage implemented in two ways: a classic REST Assured/TestNG framework and a BDD-oriented Cucumber/Gherkin suite. Covers authentication, products, search, carts, positive and negative scenarios, and an end-to-end cart flow.</p>
             <div class="metrics">
-              <span class="metric">17 API tests</span>
+              <span class="metric">17 API scenarios</span>
+              <span class="metric">REST Assured</span>
+              <span class="metric">Cucumber / Gherkin</span>
+              <span class="metric">BDD</span>
               <span class="metric">11 positive</span>
               <span class="metric">6 negative</span>
-              <span class="metric">DTOs</span>
-              <span class="metric">Soft assertions</span>
-              <span class="metric">Reusable API layer</span>
+              <span class="metric">GitHub Actions</span>
             </div>
             <ul class="project-points">
-              <li>Reusable API and configuration layers</li>
-              <li>Request/response DTOs and dynamic test data</li>
-              <li>Manual review and validation of automated API checks</li>
-              <li>TestNG, Maven, Allure, and GitHub Actions</li>
+              <li>Same regression coverage implemented with classic TestNG and BDD approaches</li>
+              <li>Domain-readable Gherkin scenarios with reusable step definitions</li>
+              <li>Typed request models, dynamic test data, and shared scenario context</li>
+              <li>CI reporting with Allure in the classic suite and native Cucumber HTML in the BDD suite</li>
             </ul>
           </article>
         </div>
